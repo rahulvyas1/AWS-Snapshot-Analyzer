@@ -2,8 +2,8 @@
 Using Boto3 Python 3 library to Manage EC2 Instance snapshots
 
 **This project will help manage your snapshots.**
-1. Lists all your EC2 Instances
-2. Lists your Volumes
+1. Lists all your EC2 Instances :radio_button:
+2. Lists your Volumes :white_check_mark: :100:
 3. Automatically create snapshots from your EC2 Volumes
 
 ## Instructions to Run the program
