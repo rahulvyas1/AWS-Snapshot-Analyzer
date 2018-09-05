@@ -4,7 +4,7 @@ ec2 = boto3.resource('ec2')
 
 
 def filter_instances(project):
-     instances = []
+    instances = []
     if project:
         filters = [{'Name':'tag:Project', 'Values':["Valkyrie"]}]
         instances = ec2.instances.filter(Filters=filters)
@@ -12,8 +12,15 @@ def filter_instances(project):
         instances = ec2.instances.all()
     return instances
 
-
 @click.group()
+def cli():
+    """Shotty manages snapshots"""
+
+@cli.group('volumes')
+def volumes():
+    """Commands for volumes"""
+
+@cli.group('instances')
 def instances():
     """Commands for instances"""
 
@@ -57,4 +64,4 @@ def start_instances(project):
         i.start()
 
 
-instances()
+cli()
