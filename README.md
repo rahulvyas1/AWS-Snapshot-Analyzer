@@ -8,7 +8,27 @@ Using Boto3 Python 3 library to Manage EC2 Instance snapshots
 
 ## Instructions to Run the program
 
-### Install Boto3 library
+### Install libraries
 ```python
-$ pip3 install boto3
+pip3 install boto3
+pip3 install click
 ```
+
+### Configuring
+
+shotty uses AWS configuration file created using the aws-cli, please follow the steps to configure your file-
+
+`aws configure`
+
+### Running
+
+After doing the above steps you are good to run this program-
+
+`python3 run pycode.py`
+
+(OPTIONAL) To pass on a project as an argument please use this-
+
+`python3 run pycode.py --project=YOUR_PROJECT_NAME`
+
+*command* is list, start, or stop
+*project* is optional
